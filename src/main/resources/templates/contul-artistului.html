@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.3/css/bootstrap.min.css"
+          integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+    body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .topnav {
+    overflow: hidden;
+    background-color: #668559;
+    }
+
+    .topnav a {
+    float: left;
+    color: #804741;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    }
+
+    .topnav a:hover {
+    background-color: #804741;
+    color: #668559;
+    }
+
+    .topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+    }
+
+    th, td {
+      text-align: left;
+      padding: 8px;
+      background-color: #804741;
+      color: #4CAF50;
+    }
+
+    </style>
+</head>
+
+<body style="background-color:#626459;">
+
+
+<div class="topnav">
+    <a  href="/contul-artistului">Contul meu</a>
+    <a href="/galerie">Galeria mea</a>
+</div>
+<div>
+
+    <table>
+        <tr>
+            <td>Username</td>
+            <td th:text="${artist.username}"></td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td th:text="${artist.email}"></td>
+        </tr>
+        <tr>
+            <td>Telefon</td>
+            <td th:text="${artist.telephonNumber}"></td>
+        </tr>
+        <tr>
+            <td>Parola</td>
+            <td><button type="button">Schimba parola</button></td>
+        </tr>
+
+    </table>
+
+</div>
+</body>
+</html>
